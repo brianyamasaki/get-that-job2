@@ -18,6 +18,10 @@ export default defineConfig({
                 ],
             },
             {
+                label: 'Preparation',
+                autogenerate: { directory: 'prepare-in-advance'},
+            },            
+            {
                 label: 'Resumes',
                 items: [
                     { label: 'What is a Resume?', slug: 'resume' },
@@ -62,7 +66,11 @@ export default defineConfig({
                 autogenerate: { directory: 'interviews' },
             },
             {
-                label: 'About Us',
+                label: 'First Day',
+                autogenerate: { directory: 'first-day' },
+            },
+            {
+                label: 'About This Website',
                 autogenerate: { directory: 'about'},
             },
         ],
