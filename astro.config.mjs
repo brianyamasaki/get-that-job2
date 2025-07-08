@@ -54,14 +54,20 @@ export default defineConfig({
                 ]
             },
             {
+                label: 'Cover Letters',
+                autogenerate: { directory: 'cover-letter' },
+            },
+            {
+                label: 'Interviews',
+                autogenerate: { directory: 'interviews' },
+            },
+            {
                 label: 'About Us',
                 autogenerate: { directory: 'about'},
             },
-            // {
-            //     label: 'Common Ideas',
-            //     autogenerate: { directory: 'common-ideas' },
-            // },
         ],
 		}), 
+        
       react()],
+      site: `https://get-that-job.yamasakidesign.com`
 });
