@@ -32,6 +32,28 @@ export default defineConfig({
                 ],
             },
             {
+                label: 'Case Studies (Resumes)',
+                items: [
+                    { label: 'Case Study A', slug: 'resume/case-study-a'},
+                    { label: 'Case Study A, part 2', slug: 'resume/case-study-a-pt2'},
+                    { label: 'Case Study A, part 3', slug: 'resume/case-study-a-pt3'},
+                    { label: 'Case Study A, recommendations', slug: 'resume/case-study-a-recommendation'},
+                    { label: 'Case Study B', slug: 'resume/case-study-b-pt1'},
+                    { label: 'Case Study B, part 2', slug: 'resume/case-study-b-pt2'},
+                    { label: 'Case Study B, part 3', slug: 'resume/case-study-b-pt3'},
+                    { label: 'Case Study B, recommendations', slug: 'resume/case-study-b-recommendation'},
+                    { label: 'Case Study C', slug: 'resume/case-study-c-pt1'},
+                    { label: 'Case Study C, part 2', slug: 'resume/case-study-c-pt2'},
+                    { label: 'Case Study C, recommendations', slug: 'resume/case-study-c-recommendation'},
+                    { label: 'Case Study D', slug: 'resume/case-study-d-pt1'},
+                    { label: 'Case Study D, part 2', slug: 'resume/case-study-d-pt2'},
+                    { label: 'Case Study D, recommendations', slug: 'resume/case-study-d-recommendation'},
+                    { label: 'Case Study E', slug: 'resume/case-study-e-pt1'},
+                    { label: 'Case Study E, part 2', slug: 'resume/case-study-e-pt2'},
+                    { label: 'Case Study E, recommendations', slug: 'resume/case-study-e-recommendation'},
+                ]
+            },
+            {
                 label: 'About Us',
                 autogenerate: { directory: 'about'},
             },
