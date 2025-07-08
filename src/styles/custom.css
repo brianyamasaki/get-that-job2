@@ -1,0 +1,4 @@
+blockquote {
+  background-color: color-mix(in srgb, var(--sl-color-accent-low), var(--sl-color-text-invert));
+  padding: 0.5rem 1rem;
+}

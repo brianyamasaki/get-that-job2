@@ -5,7 +5,7 @@ div.backButton {
 }
 
 .backButton button {
-  background-color: var(--sl-color-accent-low);
+  background-color: color-mix(in srgb, var(--sl-color-accent-low), var(--sl-color-text-invert));
   color: var(--sl-color-text);
   padding: .8em 1.5em;
   border-radius: 1em;
@@ -14,5 +14,5 @@ div.backButton {
 
 .backButton button:hover,
 .backButton button:focus {
-  background-color: var(--sl-color-accent);
+  background-color: var(--sl-color-accent-low);
 }

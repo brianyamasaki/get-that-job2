@@ -8,6 +8,9 @@ import react from '@astrojs/react';
 export default defineConfig({
     integrations: [starlight({
         title: 'Get That Job',
+        customCss: [
+            './src/styles/custom.css'
+        ],
         sidebar: [
             {
                 label: 'How Hiring Works',
