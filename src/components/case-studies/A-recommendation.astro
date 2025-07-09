@@ -65,6 +65,8 @@
 
 <style>
   .paper {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
     border: 2px solid gray;
     padding: 1em;
   }
@@ -73,8 +75,12 @@
     margin-bottom: 0.2em;
   }
   .paper h3 {
-    margin-top: 0.5em;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
     text-align: center;
+  }
+  .paper h4 {
+    font-size: 1.4rem;
   }
   .subhead {
     text-align: center;
@@ -87,8 +93,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items:baseline;
+    margin-top: 0;
   }
   .flex-item {
+    margin-top: 0;
     width: 49%;
   }
   @media (max-width: 45em) {

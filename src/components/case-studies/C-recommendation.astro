@@ -93,80 +93,90 @@
   </div>
 </div>
 
-<style>
+<style lang="scss">
   .page {
     border: 2px solid black;
     padding: 1em 1em 0 1em;
-  }
-  .page h2 {
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-bottom: .1em;
-  }
-  .page h2 span {
-    font-size: 130%;
-    color: rgb(100, 130, 118);
-  }
-  .page h3 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: rgb(100, 130, 118);
-    margin: 0.25em 0 0 0;
-    font-size: 1.4rem;
-    text-align: center;
-  }
-  .page .two-column h4 {
-    font-size: 1.1rem;
-    margin: .3em 0 .2em 0;
-  }
-  .page ul {
-    margin-left: 0.3em;
-    margin-right: 0.2em;
-  }
-  .page li {
-    margin: 0;
-  }
-  .subhead {
-    border-bottom: 2pt solid rgb(100, 130, 118);
-  }
-  .flexy {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:space-between ;
-  }
-  .two-column {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  .left-column {
-    flex: 3;
-    min-width: 12em;
-  }
-  .section {
-    margin-bottom: 1em;
-  }
-  .right-column {
-    flex: 4;
-    border-left: 2pt solid rgb(100, 130, 118);
-    min-width: 18em;
-  }
-  .right-column .section {
-    padding-left: .3em;
-  }
-  .start-section {
-    border-top: 2pt solid rgb(100, 130, 118);
-  }
-  .color-spot {
-    height: 4rem;
-    margin: 1em 0 0 0;
-    background-color: rgb(100, 130, 118);
-  }
-  @media (max-width: 35em) {
+    h2 {
+      text-align: center;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      margin-bottom: .1rem;
+    }
+    h2 span {
+      font-size: 130%;
+      color: rgb(100, 130, 118);
+    }
+    h3 {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: rgb(100, 130, 118);
+      margin: 0.25rem 0 0 0;
+      font-size: 1.4rem;
+      text-align: center;
+    }
+    .two-column h4 {
+      font-size: 1.1rem;
+      margin: .3rem 0 .2rem 0;
+    }
+    ul {
+      margin: 0.2rem 0.2rem 0.1rem 0.4rem;
+      padding-left: 1rem;
+    }
+    li {
+      margin: 0;
+      line-height: 1.3rem;
+    }
+    .subhead {
+      border-bottom: 2pt solid rgb(100, 130, 118);
+    }
+    .flexy {
+      margin:0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content:space-between ;
+      align-items: baseline;
+      div {
+        margin: 0;
+      }
+    }
     .two-column {
-      display: block;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: start;
+      div {
+        margin: 0;
+      }
+    }
+    .left-column {
+      flex: 3;
+      min-width: 12rem;
+    }
+    .section {
+      margin-bottom: 1em;
     }
     .right-column {
-      border: none;
+      flex: 4;
+      border-left: 2pt solid rgb(100, 130, 118);
+      min-width: 18rem;
+    }
+    .right-column .section {
+      padding-left: .3em;
+    }
+    .start-section {
+      border-top: 2pt solid rgb(100, 130, 118);
+    }
+    .color-spot {
+      height: 4rem;
+      margin: 1em 0 0 0;
+      background-color: rgb(100, 130, 118);
+    }
+    @media (max-width: 35em) {
+      .two-column {
+        display: block;
+      }
+      .right-column {
+        border: none;
+      }
     }
   }
 

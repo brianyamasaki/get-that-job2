@@ -56,18 +56,18 @@
 <style>
   .page {
     border: 2px solid black;
-    background-image: url(/assets/resumes/fire1/page-background.svg);
+    background-image: url(../../content/docs/resume/assets/fire1/page-background.svg);
     background-repeat: no-repeat;
     background-size: 100%; 
     padding: 1em 1em 2em 2em;
     position: relative;
   }
-  html.theme-dark .page {
-    background-image: url(/assets/resumes/fire1/dark-page-background.svg);
+  html[data-theme="dark"] .page {
+    background-image: url(../../content/docs/resume/assets/fire1/dark-page-background.svg);
   }
   .page h2 {
     text-align: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, 'Helvetica Neue', Helvetica, sans-serif;
     margin-bottom: .1em;
   }
   .page h2 span {
@@ -102,7 +102,6 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-top: 2em;
   }
   .left-column {
     flex: 4;
@@ -116,6 +115,7 @@
   .right-column {
     flex: 9;
     margin-left: 1.5em;
+    margin-top: 0;
   }
   .tooltip {
     background-color: hsla(var(--color-yellow), .40);
