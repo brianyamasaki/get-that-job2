@@ -11,6 +11,9 @@ export default defineConfig({
         customCss: [
             './src/styles/custom.css'
         ],
+        components: {
+            SiteTitle: './src/starlightOverrides/Sitetitle.astro'
+        },
         sidebar: [
             {
                 label: 'How Hiring Works',

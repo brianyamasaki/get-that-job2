@@ -1,0 +1,58 @@
+---
+import Default from '@astrojs/starlight/components/SiteTitle.astro';
+
+import type { Props } from '@astrojs/starlight/props';
+import links from '../data/nav-links.json';
+---
+
+<div>
+    <Default {...Astro.props} />
+    <ul>
+      {links.map(link => (
+        <li key={link.id}>
+          <a href={link.link}>{link.text}</a>
+        </li>
+      ))}
+    </ul>
+</div>
+
+<style>
+  div {
+    display: flex;
+    align-items: center;
+    gap: var(--sl-nav-gap);
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: var(--sl-nav-gap);
+  }
+  a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--sl-color-text);
+  }
+
+  a:hover,
+  a:focus {
+    color: color-mix(in srgb, var(--sl-color-text), var(--sl-color-text-invert));
+  }
+
+  [aria-current="page"],
+  [aria-current="page"]:hover,
+  [aria-current="page"]:focus {
+    font-weight: 600;
+  }
+
+  @media (max-width: 70rem) {
+    a {
+      font-size: var(--sl-text-sm);
+    }
+  }
+  @media (max-width: 60rem) {
+    ul {
+      display:none;
+    }
+  }
+</style>

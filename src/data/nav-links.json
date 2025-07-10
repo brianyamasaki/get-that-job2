@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "text": "Resumes",
+    "link": "/resume"
+  },
+  {
+    "id": 2,
+    "text": "Cover Letters",
+    "link": "/cover-letter"
+  },
+  {
+    "id": 3,
+    "text": "Interviews",
+    "link": "/interviews"
+  },
+  {
+    "id": 3,
+    "text": "About",
+    "link": "/about"
+
+  }
+]
