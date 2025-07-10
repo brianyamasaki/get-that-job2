@@ -1,4 +1,5 @@
 ---
+import Tooltip from "@components/Tooltip.astro"
 
 ---
 
@@ -9,13 +10,14 @@
     &nbsp;|&nbsp;
     (425)555-1212
     &nbsp;|&nbsp;
-    <span class="tooltip" data-tip='Ensure printed copies can still lead to the correct LinkedIn account'>
-      <a href="#"><strong>LinkedIn: in/adelefort</strong></a>
-    </span>
+    <Tooltip tooltip="Ensure printed copies can still lead to the correct LinkedIn account"><a href="#"><strong>LinkedIn: in/adelefort</strong></a></Tooltip>
   </div>
-  <p class="objective tooltip" data-tip="Optional, but might help recruiter see resource management skills through the engineer job titles">
-    <strong>Objective: </strong> Experienced engineer with product management, team leadership and resource management skills seeks role in Project Management
+  <p class="objective">
+    <Tooltip tooltip="Optional, but might help recruiter see resource management skills through the engineer job titles">
+      <strong>Objective: </strong> Experienced engineer with product management, team leadership and resource management skills seeks role in Project Management
+    </Tooltip>
   </p>
+  
   <h3 id="education" >Education</h3>
   <hr />
   <h4>Prestigious University, <small>Pandora, WA</small></h4>
@@ -42,16 +44,21 @@
   </p>
   <h5><span class="underline">Team32</span>: Electronics Engineer | Cost Lead</h5>
   <ul>
-    <li><span class="tooltip" data-tip="Emphasize organizational skills as first item">Managed Record keeping of costs and expenses for the team.</span></li>
+    <li>
+      <Tooltip tooltip="Emphasize organizational skills as first item">Managed Record keeping of costs and expenses for the team.</Tooltip>
+    </li>
     <li>Circuit design and PCB layout for Brake System. Improved design detects simultaneous hard braking and throttle
       and optimized layout for 15% size reduction.
     </li>
-    <li>Designed, built and tested new features for steering wheel and dashboard controls <span class="tooltip" data-tip="Acronym is for interviewer to ask for details">(TSAL)</span></li>
+    <li>Designed, built and tested new features for steering wheel and dashboard controls 
+      <Tooltip tooltip="Acronym is for interviewer to ask for details">(TSAL)</Tooltip>
+    </li>
   </ul>
   <h5><span class="underline">Team31</span>: Composites Engineer | Business Consultang</h5>
   <ul>
-    <li><span class="tooltip" data-tip="Emphasize organizational and communication skills as first item">Managed Team 31 business financials, marketing plans and competition research case studies - delivered investment pitch
-      and formal presentation at Formula SAE competition.</span>
+    <li>
+      <Tooltip tooltip="Emphasize organizational and communication skills as first item">Managed Team 31 business financials, marketing plans and competition research case studies - delivered investment pitch
+      and formal presentation at Formula SAE competition.</Tooltip>
     </li>
     <li>Designed, built and tested carbon fiber parts for race car suspension parts, reducing weight by 40%</li>
   </ul>
@@ -118,10 +125,6 @@
       font-size: 1.1em;
       line-height: 1.1em;
       color:  var(--sl-color--text);
-    }
-    .tooltip {
-      background-color: var(--sl-color-accent-low);
-      cursor: pointer;
     }
     .underline {
       text-decoration: underline;

@@ -1,0 +1,57 @@
+---
+const { tooltip } = Astro.props;
+---
+
+<span class="tooltip" data-tooltip={tooltip}>
+  <slot />
+</span>
+
+<style lang="scss">
+	.tooltip {
+		background-color: color-mix(in srgb, var(--sl-color-accent) 20%, var(--sl-color-text-invert) 80%);
+		position:relative;
+	}
+	.tooltip::before,
+	.tooltip::after {
+		--scale: 0;
+		--tooltip-color: var(--sl-color-text);
+		--arrow-size: 10px;
+		position:absolute;
+		top: -.25rem;
+		left: 50%;
+		transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+		transition: 150ms transform;
+		transform-origin: bottom center;
+	}
+	.tooltip::before {
+		--translate-y: calc(-100% - var(--arrow-size));
+		font-size: 1.2rem;
+		content: attr(data-tooltip);
+		color: var(--sl-color-text-invert);
+		padding: .5rem;
+		width: max-content;
+		max-width: 50rem;
+		background: var(--tooltip-color);
+		border-radius:0.3rem;
+		text-align: center;
+		text-transform: none;
+	}
+	.tooltip:hover::before,
+	.tooltip:hover::after,
+	.tooltip:active::before,
+	.tooltip:active::after,
+	 {
+		--scale: 1;
+	}
+
+	.tooltip:after 
+	{
+		--translate-y: calc(-1 * var(--arrow-size));
+		content: '';
+		border: 10px solid transparent;
+		border-top-color:var(--tooltip-color);
+		transform-origin: top center;
+	}
+
+</style>
+

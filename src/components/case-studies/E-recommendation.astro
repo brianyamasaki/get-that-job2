@@ -1,5 +1,5 @@
 ---
-
+import Tooltip from "@components/Tooltip.astro"
 ---
 
 <div class="page">
@@ -8,18 +8,19 @@
     <div>
       Phone: <strong>425-555-1212</strong>
     </div>
-    <div class="tooltip" data-tip="Created a more professional, yet free email address">
-      Email: <strong>kyleeSchneider425@msn.com</strong>
+    <div>
+      <Tooltip tooltip="Created a more professional, yet free email address">Email: <strong>kyleeSchneider425@msn.com</strong></Tooltip>
     </div>
     <div class="tooltip" data-tip="Created a LinkedIn account and will fill in job experiences going forward">
-      LinkedIn: <strong>in/kylee425</strong>
+      <Tooltip tooltip="Created a LinkedIn account and will fill in job experiences going forward">
+        LinkedIn: <strong>in/kylee425</strong>
+      </Tooltip>
     </div>
   </div>
-  <h3 
-    class="tooltip" 
-    data-tip="Since Kylee has no non-educational experiences with Biochemistry, we roll all her biochemistry experiences into the educational section"
-  >
-    Education and Biochemistry Experience
+  <h3>
+    <Tooltip tooltip="Since Kylee has no non-educational experiences with Biochemistry, we roll all her biochemistry experiences into the educational section">
+      Education and Biochemistry Experience
+    </Tooltip>
   </h3>
   <ul class="tight-list">
     <li><strong>Bachelor of Science in Biochemistry</strong> from <em>Prestitious University</em> - Dean's List (4 quarters)</li>
@@ -28,8 +29,10 @@
     <li>Experience with H-NMR, IR, mass spectrometry, UV-VIS spectrometry, chromatography, fluorescence spectrometry, oxygen bomb calorimetry, etc</li>
     <li>Undergraduate thesis - Exploring the properties of a then unresearched organo-photocatalyst under the guidance of a professor. Maintained rigorous methodology, records and analyzed data using latest computer software and tools.</li>
   </ul>  
-  <h3 class="tooltip" data-tip="Highlight Kylee's responsibility, leadership and teaching experience">
+  <h3>
+    <Tooltip tooltip="Highlight Kylee's responsibility, leadership and teaching experience">
     Leadership and Mentorship Experience
+    </Tooltip>
   </h3>
   <ul class="tight-list">
     <li><strong>Staff of Summer Camp Hahobas</strong> - Boys and Girls Clubs of Random County &mdash; Taught 4 - 12 year old children in science and outdoor related activities while maintaining order and keeping it fun.</li>
@@ -39,7 +42,7 @@
   </ul>
 </div>
 
-<style>
+<style lang="scss">
   .page {
     border: 2px solid black;
     padding: 2rem 2rem 3rem 2rem;
@@ -57,19 +60,20 @@
   }
   .page h3 {
     font-family: 'Calibri', 'Tahoma', Arial, Helvetica, sans-serif;
-    margin: 2rem 0 0 0;
+    margin: 1rem 0 0 0;
     font-size: 1.4rem;
     text-transform: uppercase;
     border-bottom: 1px solid black;
   }
   .flexysubhead {
+    margin: 0;
     display: flex;
     font-size: 0.7rem;
     justify-content: space-between;
-  }
-  .tooltip {
-    background-color: hsla(var(--color-yellow), .40);
-    cursor: pointer;
+    align-items: flex-end;
+    div {
+      margin:0;
+    }
   }
   ul.tight-list {
     margin: 0 1rem 0 1rem;

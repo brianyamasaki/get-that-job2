@@ -1,5 +1,5 @@
 ---
-
+import Tooltip from "@components/Tooltip.astro"
 ---
 
 <div class="paper">
@@ -9,9 +9,11 @@
     &nbsp;&#9679;&nbsp;
     (425)555-1212
     &nbsp;&#9679;&nbsp;
-    <span class="tooltip" data-tip='Open a free LinkedIn account and keep your Complete Resume up there'>LinkedIn: in/aeonlynx/</span>
+    <Tooltip tooltip="Open a free LinkedIn account and keep your Complete Resume up there">LinkedIn: in/aeonlynx/</Tooltip>
   </div>
-  <h3 id="education" class="smallMargin"><span class="tooltip" data-tip="Centered section headers allow for ultra fast skimming to find correct section">Education</span></h3>
+  <h3 id="education" class="smallMargin">
+    <Tooltip tooltip="Centered section headers allow for ultra fast skimming to find correct section">Education</Tooltip>
+  </h3>
   <h4 class="smallMargin">Transylvania State University, <small>City, State</small></h4>
   <ul>
     <li>Expected graduation in Spring 2023</li>
@@ -30,7 +32,9 @@
     <li>Experienced with CNC machining with manual editing of G-Code programs</li>
     <li>Worked at multiple roles in shop manufacturing processing</li>
   </ul>
-  <h3 id="achievements" class="smallMargin"><span class="tooltip" data-tip='Use multiple columns if you have problems fitting into a single page. If you are using a phone to view this, this section will display in a single column'>Achievements</span></h3>
+  <h3 id="achievements" class="smallMargin">
+    <Tooltip tooltip="Use multiple columns if you have problems fitting into a single page. If you are using a phone to view this, this section will display in a single column">Achievements</Tooltip>
+  </h3>
   <div class="flexy">
     <div class="flex-item">
       <h4 class="smallMargin">Home Renovation</h4>
@@ -108,9 +112,5 @@
   .smallMargin {
     margin-top:1em;
     margin-bottom:0.5em;
-  }
-  .tooltip {
-    background-color: hsla(var(--color-yellow), .40);
-    cursor: pointer;
   }
 </style>
