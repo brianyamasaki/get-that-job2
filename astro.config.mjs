@@ -6,13 +6,33 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
+    redirects: {
+        "/en/introduction": "/",
+        "/en/resume/case-study-A/": "/resume/case-study-a",
+        "/en/resume/case-study-A-pt2/": "/resume/case-study-a-pt2",
+        "/en/resume/case-study-A-recommendations/": "/resume/case-study-a-recommendation",
+        "/en/resume/case-study-B-pt1/": "/resume/case-study-b-pt1",
+        "/en/resume/case-study-B-pt2/": "/resume/case-study-b-pt2",
+        "/en/resume/case-study-B-pt3/": "/resume/case-study-b-pt3",
+        "/en/resume/case-study-B-recommendation/": "/resume/case-study-b-recommendation",
+        "/en/resume/case-study-C-pt1/": "/resume/case-study-c-pt1",
+        "/en/resume/case-study-C-pt2/": "/resume/case-study-c-pt2",
+        "/en/resume/case-study-C-recommendation/": "/resume/case-study-c-recommendation",
+        "/en/resume/case-study-D-pt1/": "/resume/case-study-d-pt1",
+        "/en/resume/case-study-D-pt2/": "/resume/case-study-d-pt2",
+        "/en/resume/case-study-D-recommendation/": "/resume/case-study-d-recommendation",
+        "/en/resume/case-study-E-pt1/": "/resume/case-study-e-pt1",
+        "/en/resume/case-study-E-pt2/": "/resume/case-study-e-pt2",
+        "/en/resume/case-study-E-recommendation/": "/resume/case-study-e-recommendation",
+        "/en/[...slug]": "/[...slug]",
+    },
     integrations: [starlight({
         title: 'Get That Job',
         customCss: [
             './src/styles/custom.css'
         ],
         components: {
-            SiteTitle: './src/starlightOverrides/Sitetitle.astro'
+            SiteTitle: './src/starlightOverrides/SiteTitle.astro'
         },
         sidebar: [
             {
